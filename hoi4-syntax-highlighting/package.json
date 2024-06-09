@@ -1,0 +1,39 @@
+{
+	"name": "hoi4-syntax-highlighting",
+	"displayName": "HOI4 Syntax highlighting",
+	"description": "Adds syntax highlighting for Hearts Of Iron 4 mod files.",
+	"version": "0.0.1",
+	"publisher": "ThePheonix3k",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Unknown025/HOI4-VSCE.git"
+	},
+	"engines": {
+		"vscode": "^1.58.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "hoi4",
+				"aliases": [
+					"HOI4",
+					"hoi4"
+				],
+				"extensions": [
+					".txt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "hoi4",
+				"scopeName": "source.hoi4",
+				"path": "./syntaxes/hoi4.tmLanguage.json"
+			}
+		]
+	}
+}

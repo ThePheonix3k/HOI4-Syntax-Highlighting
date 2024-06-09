@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HOI4",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#focus"
+		},
+		{
+			"include": "#assignment"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.hoi4",
+					"match": "(#.*)"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "support.class.hoi4",
+					"match": "\\b(if|if-else|else|limit|NOT|AND|OR|x|y)\\b"
+				}
+			]
+		},
+		"focus": {
+			"patterns": [
+				{
+					"name": "keyword.control.hoi4",
+					"match": "\\b(focus|id|icon|completion_reward|available|cost|ai_will_do|prerequisite|search_filters|relative_position_id|title|desc|picture|is_triggered_only|country_event|name|option)\\b"
+				}
+			]
+		},
+		"assignment": {
+			"patterns": [
+				{
+					"name": "constant.character.hoi4",
+					"match": "="
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.parameter.hoi4",
+					"match": "([A-Z]+\\b.)+([A-Z]+)"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.hoi4",
+					"match": "\\b\\d+"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hoi4",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hoi4",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.hoi4"
+}
